@@ -26,10 +26,16 @@ a propriedade é privada! */
 /* Usando o setter para atribuir um valor 
 à propriedade privada "nome" */
 $clienteA->setNome("Fulano da Silva");
+
+
+$clienteA->setEmail("fulano@gmail.com");
+$clienteA->setSenha("123abc");
 ?>
 
 <!-- Usando o getter para ler/acessar dados privados -->
 <p>Nome: <?=$clienteA->getNome()?></p>
+<p>E-mail: <?=$clienteA->getEmail()?></p>
+<p>Senha: <?=$clienteA->getSenha()?></p>
 
 <pre> <?=var_dump($clienteA)?> </pre>
 
