@@ -11,6 +11,7 @@
     <h2>Assuntos abordados:</h2>
     <ul>
         <li>Herança (Super Classe e Sub Classe)</li>
+        <li>Métodos/propriedades protegidos (acessíveis apenas pela classe em que foram definidos e pelas subclasses)</li>
     </ul>
 
 <?php
@@ -24,6 +25,7 @@ $clientePF->setNome("Fulano");
 $clientePF->setEmail("fulano@gmail.com");
 $clientePF->setIdade(20);
 $clientePF->setCpf("123.456.789-00");
+
 
 $clientePJ->setNome("Beltrano S/A");
 $clientePJ->setEmail("blabla@gmail.com");
