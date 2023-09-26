@@ -15,15 +15,24 @@
 
 <?php
 require_once "src/PessoaFisica.php";
+require_once "src/PessoaJuridica.php";
+
 $clientePF = new PessoaFisica;
+$clientePJ = new PessoaJuridica;
 
 $clientePF->setNome("Fulano");
 $clientePF->setEmail("fulano@gmail.com");
 $clientePF->setIdade(20);
 $clientePF->setCpf("123.456.789-00");
+
+$clientePJ->setNome("Beltrano S/A");
+$clientePJ->setEmail("blabla@gmail.com");
+$clientePJ->setAnoFundacao(2000);
+$clientePJ->setCnpj("32.088.0001/000.41");
+$clientePJ->setNomeFantasia("Bla Bla Informática");
 ?>
 
-<pre> <?=var_dump($clientePF)?> </pre>
+<pre> <?=var_dump($clientePF, $clientePJ)?> </pre>
 
 
 </body>
