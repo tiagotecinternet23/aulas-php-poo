@@ -12,6 +12,8 @@
     <ul>
         <li>Herança (Super Classe e Sub Classe)</li>
         <li>Métodos/propriedades protegidos (acessíveis apenas pela classe em que foram definidos e pelas subclasses)</li>
+        <li>Classe Abstrata</li>
+        <li>Classe Final</li>
     </ul>
 
 <?php
@@ -36,6 +38,15 @@ $clientePJ->setNomeFantasia("Bla Bla Informática");
 
 <pre> <?=var_dump($clientePF, $clientePJ)?> </pre>
 
+<hr>
+
+<?php
+require_once "src/Cliente.php";
+
+// Dá erro, pois Cliente é uma classe abstrata
+$clienteGenerico = new Cliente;
+?>
+<pre><?=var_dump($clienteGenerico)?></pre>
 
 </body>
 </html>
