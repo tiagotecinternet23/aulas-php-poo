@@ -19,7 +19,7 @@
 <?php
 use Fornecedor\Pagamento;
 use Prestador\Pagamento as PrestadorPagamento;
-use Tabajara\{MEI, PessoaFisica as PF, PessoaJuridica as PJ};
+use Tabajara\{Escola, MEI, PessoaFisica as PF, PessoaJuridica as PJ};
 
 require_once "vendor/autoload.php";
 
@@ -42,6 +42,17 @@ $clientePJ->setNomeFantasia("Poeira em alto mar");
 $clienteMEI->setAreaDeAtuacao("TI");
 ?>
 <p>Cliente: <?=$clientePF->getNome()?></p>
+
+<hr>
+
+<?php
+$escola = new Escola;
+var_dump($escola);
+?>
+
+
+
+
 
 
 </body>
