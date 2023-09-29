@@ -22,9 +22,13 @@ já dá erro no servidor devido a terem o mesmo nome. */
 use Fornecedor\Pagamento;
 use Prestador\Pagamento as PrestadorPagamento;
 
-use Tabajara\MEI;
-use Tabajara\PessoaFisica;
-use Tabajara\PessoaJuridica;
+// Use individual (um pra cada classe)
+// use Tabajara\MEI;
+// use Tabajara\PessoaFisica;
+// use Tabajara\PessoaJuridica;
+
+// Use com uma lista de classes
+use Tabajara\{MEI, PessoaFisica as PF, PessoaJuridica as PJ};
 
 require_once "src/fornecedores/Pagamento.php";
 require_once "src/prestadores/Pagamento.php";
@@ -60,8 +64,8 @@ require_once "src/PessoaFisica.php";
 require_once "src/PessoaJuridica.php";
 require_once "src/MEI.php";
 
-$clientePF = new PessoaFisica;
-$clientePJ = new PessoaJuridica;
+$clientePF = new PF;
+$clientePJ = new PJ;
 $clienteMEI = new MEI;
 
 $clientePF->setNome("Beltrano");
