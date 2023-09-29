@@ -22,6 +22,10 @@ já dá erro no servidor devido a terem o mesmo nome. */
 use Fornecedor\Pagamento;
 use Prestador\Pagamento as PrestadorPagamento;
 
+use Tabajara\MEI;
+use Tabajara\PessoaFisica;
+use Tabajara\PessoaJuridica;
+
 require_once "src/fornecedores/Pagamento.php";
 require_once "src/prestadores/Pagamento.php";
 
@@ -45,7 +49,26 @@ $pagamentoPrestador = new PrestadorPagamento;
 
 <hr>
 
+<!-- Exercícios: 
+- Crie objetos cliente PF, cliente PJ e cliente MEI 
+- Coloque alguns dados usando setters
+- Exiba alguns dados no HTML
+-->
 
+<?php
+require_once "src/PessoaFisica.php";
+require_once "src/PessoaJuridica.php";
+require_once "src/MEI.php";
+
+$clientePF = new PessoaFisica;
+$clientePJ = new PessoaJuridica;
+$clienteMEI = new MEI;
+
+$clientePF->setNome("Beltrano");
+$clientePJ->setNomeFantasia("Poeira em alto mar");
+$clienteMEI->setAreaDeAtuacao("TI");
+?>
+<p>Cliente: <?=$clientePF->getNome()?></p>
 
 
 </body>
