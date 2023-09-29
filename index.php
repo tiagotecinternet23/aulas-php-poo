@@ -15,6 +15,10 @@
         <li>Configurar e usar <code>namespaces</code> e <code>alias</code></li>
     </ul>
 
+<?php
+require_once "src/fornecedores/Pagamento.php";
+require_once "src/prestadores/Pagamento.php";
+?>
 
 
 </body>
